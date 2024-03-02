@@ -25,7 +25,7 @@ from ekphrasis.dicts.emoticons import emoticons
 
 # Load the dataset
 df = pd.read_csv("dataset_cl.csv")  # Replace "your_dataset.csv" with the actual path to your dataset
-df = df.sample(frac=1,)
+df = df.sample(frac=1,random_state=42)
 label_map = {'fake': 0, 'real': 1}
 df['label'] = df['label'].map(label_map)
 #init of componunts
